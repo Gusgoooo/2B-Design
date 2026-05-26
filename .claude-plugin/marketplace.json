@@ -1,0 +1,25 @@
+{
+  "name": "2b-design-marketplace",
+  "description": "2B-Design 系列 Claude Code plugins。面向中国产品设计师的 B 端 SaaS / dashboard 产品设计 pipeline。基于 React + Tailwind + Design-anchor。",
+  "owner": {
+    "name": "design-anchor contributors"
+  },
+  "plugins": [
+    {
+      "name": "2b-design",
+      "source": "./",
+      "description": "面向中国产品设计师的 B 端 SaaS / dashboard / 内部工具产品设计 pipeline。基于 React + Tailwind + Design-anchor。9 个 stage 从品牌前置（装包+Portal）到长期治理。",
+      "category": "design",
+      "tags": [
+        "chinese",
+        "b2b",
+        "saas",
+        "dashboard",
+        "react",
+        "tailwind",
+        "design-anchor",
+        "product-design"
+      ]
+    }
+  ]
+}

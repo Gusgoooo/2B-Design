@@ -2,7 +2,49 @@
 
 All notable changes to 2B-Design skill.
 
-## 0.3.8
+## [0.4.0] - 2026-05-26
+
+### Restructured（结构重构）
+
+- **Progressive disclosure SKILL.md**：主入口从 459 行（~5000 tokens）压到 ~100 行（~600 tokens），符合 Anthropic 官方 skills 最佳实践
+- **新建 `references/` 单一真源**（5 个中文文件）：
+  - `references/lifecycle.md` —— 9 stage 总览 + 触发词路由
+  - `references/stage-rules.md` —— 每个 stage 的 AI 行为规则
+  - `references/anchor-npm-protocol.md` —— design-anchor npm 工具调用协议
+  - `references/hard-rules.md` —— 不可妥协的硬性约束
+  - `references/surface-mode-policy.md` —— intro/product 双模式
+- **AGENTS.md / system-prompt.md 重写为中文**（self-contained，给 Codex/Cursor/Cline/ChatGPT 等不支持 Read 的工具）
+
+### Repositioned（重设计 lifecycle）
+
+- **品牌前置（Stage 0）**：合并原项目模式 + 风格选择。首次进入必走 Stage 0 = 装 `design-anchor` + 跑 Portal onboarding + 定品牌 preset，让用户最早用上 npm 包，让后续梳理在已定品牌 scope 内
+- 原 Stage 5「主题决策」→ 新 Stage 5「主题校准」：不再是从头选 preset，而是基于 Stage 4 实际页面密度反推 token 微调
+
+### Locked（技术栈固定）
+
+- **技术栈 React + Tailwind 固定**，skill 主动告知用户、主动应用，**不询问** Vue / Angular / styled-components 等替代
+
+### Added（吸收热门 AI design skill 实践）
+
+- **设计系统 supremacy** 原则（参考 Lovable Agent）：任何 ad-hoc style 等同 bug，必须回 Design-anchor token
+- **两轮 refinement pass**（参考 Anthropic canvas-design）：Stage 7 第一轮跑 audit 修硬伤；第二轮不引入新组件/新 token，只 polish
+- **反 bypass 强 gate**：每个 stage 提醒"绕过 design-anchor 直接写 style/装别家组件库 → STOP"
+- **pushy description** + 强动词 routing（参考 Anthropic skills/pdf）：对抗 undertrigger
+
+### Naming（命名统一）
+
+- skill 内部名统一为 `2b-design`（SKILL.md frontmatter / 安装路径目录名）
+- `package.json` name 保持 `2b-design-skill`（npm 包命名习惯）
+- **删除 `package.json` 的 `bin` 字段**：废弃 `2b-design-apply-preset` CLI 入口
+- INSTALL.md 收敛为单一 git clone 路径 `~/.claude/skills/2b-design`
+- README.md / CHANGELOG.md 同步命名
+
+### Migration from 0.3.x
+
+- 已 clone 到 `~/.claude/skills/anchor-suite/` 的用户需要 `mv` 到 `~/.claude/skills/2b-design/`
+- 之前依赖 `2b-design-apply-preset` 全局 CLI 的用户改为 `node ~/.claude/skills/2b-design/scripts/apply-preset.mjs <preset>`
+
+## [0.3.8] - 2026-05-26
 
 - Added a Design-anchor npm tool protocol so AI tools know when to download and
   invoke `design-anchor` for Portal, init, sync, audit, and Project Health.

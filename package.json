@@ -1,17 +1,22 @@
 {
   "name": "2b-design-skill",
-  "version": "0.3.8",
-  "description": "Product-designer-first AI Skill that turns B2B/SaaS ideas into product plans, page IA, theme tokens, governed UI implementation briefs, and Design-anchor Project Health loops.",
+  "version": "0.4.0",
+  "description": "2B-Design：面向中国产品设计师的 B 端 SaaS / dashboard / 内部工具 UI pipeline Claude Skill。基于 React + Tailwind + Design-anchor。9 个 stage 从品牌前置到长期治理。",
   "keywords": [
     "claude-skill",
+    "claude-code",
     "ai-skill",
     "product-design",
     "design-system",
     "design-anchor",
     "b2b-saas",
+    "dashboard",
+    "react",
+    "tailwind",
     "ai-coding",
     "vibecoding",
-    "anti-slop"
+    "anti-slop",
+    "chinese"
   ],
   "homepage": "https://github.com/Gusgoooo/2B-Design",
   "repository": {
@@ -19,7 +24,7 @@
     "url": "git+https://github.com/Gusgoooo/2B-Design.git"
   },
   "license": "MIT",
-  "author": "Gusgoooo",
+  "author": "design-anchor contributors",
   "type": "module",
   "files": [
     "SKILL.md",
@@ -29,17 +34,14 @@
     "INSTALL.md",
     "LICENSE",
     "CHANGELOG.md",
+    "references/",
     "presets/",
     "templates/",
     "scripts/"
   ],
   "scripts": {
-    "pack:release": "npm pack --pack-destination releases",
     "test:apply": "node scripts/apply-preset.mjs vercel-geist .",
-    "verify": "node -e \"console.log('SKILL.md exists:', require('fs').existsSync('SKILL.md'))\""
-  },
-  "bin": {
-    "2b-design-apply-preset": "./scripts/apply-preset.mjs"
+    "verify": "node -e \"const fs=require('fs');['SKILL.md','AGENTS.md','system-prompt.md'].forEach(f=>console.log(f+':',fs.existsSync(f)));console.log('references/:',fs.existsSync('references'));\""
   },
   "peerDependencies": {
     "design-anchor": "^4.0.0"
