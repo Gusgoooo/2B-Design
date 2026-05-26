@@ -64,6 +64,6 @@ Stage 0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 - **product mode**（app 内页/dashboards/forms/tables/settings）：同一套 token，降低装饰、连续动效
 - token-compatible 细节（color/spacing/radius/typography/shadow/motion）**都必须走 token**
 
-## 可选 preset（13 个）
+## 可选 preset（Portal 展示的 6 个）
 
-`linear` / `vercel-geist` / `stripe` / `web3-dark` / `minimal-dark` / `saas-style-01` / `saas-dark-02` / `google-style` / `hud-dark-style` / `luxury-style` / `notion-soft` / `brutalist` / `glass`
+`linear` / `stripe` / `saas-style-01` / `google-style` / `minimal-dark` / `hud-dark-style`

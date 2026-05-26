@@ -99,7 +99,7 @@ references/
 └── surface-mode-policy.md    # intro / product 双模式
 
 templates/                    # 用户产物模板（concept / roadmap / features / pages 等）
-presets/                      # 13 个品牌 preset（linear / stripe / vercel-geist / ...）
+presets/                      # Portal 同步的 6 个品牌 preset（linear / stripe / saas-style-01 / google-style / minimal-dark / hud-dark-style）
 scripts/
 ├── apply-preset.mjs          # preset 应用 fallback（MCP 不可用时）
 └── eject-preset.mjs          # 项目当前 token 反向导出为 preset

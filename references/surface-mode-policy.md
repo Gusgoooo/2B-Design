@@ -58,6 +58,15 @@
 
 ## 给每个 preset 的应用
 
-13 个 preset（`linear` / `vercel-geist` / `stripe` / `web3-dark` / `minimal-dark` / `saas-style-01` / `saas-dark-02` / `google-style` / `hud-dark-style` / `luxury-style` / `notion-soft` / `brutalist` / `glass`）的 `style.md` 顶部都内联了简化版本的 surface mode 段；本文件是 canonical 版本。
+当前 skill 只保留 Design-anchor Portal onboarding 中展示的 6 个 preset：
+
+- `linear`
+- `stripe`
+- `saas-style-01`
+- `google-style`
+- `minimal-dark`
+- `hud-dark-style`
+
+这些 preset 的 `style.md` 顶部都内联了简化版本的 surface mode 段；本文件是 canonical 版本。
 
 如果 preset style.md 与本文件冲突，**以本文件为准**。

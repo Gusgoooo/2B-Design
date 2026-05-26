@@ -1,0 +1,8 @@
+interface:
+  display_name: "2B-Design"
+  short_description: "B端产品设计到受治理AI界面"
+  brand_color: "#0D0D0D"
+  default_prompt: "Use $2b-design to turn this B2B product idea into PRD clarification, page IA, preset selection, and a Design-Anchor governed implementation plan."
+
+policy:
+  allow_implicit_invocation: true

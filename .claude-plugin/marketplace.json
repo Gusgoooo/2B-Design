@@ -2,7 +2,7 @@
   "name": "2b-design-marketplace",
   "description": "2B-Design 系列 Claude Code plugins。面向中国产品设计师的 B 端 SaaS / dashboard 产品设计 pipeline。基于 React + Tailwind + Design-anchor。",
   "owner": {
-    "name": "design-anchor contributors"
+    "name": "Gusgoooo"
   },
   "plugins": [
     {

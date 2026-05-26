@@ -53,11 +53,11 @@ npx design-anchor start
 ```
 
 引导用户在 Portal 的 onboarding flow 完成：
-- 选择品牌 preset（13 个 vibe preset 之一）
+- 选择品牌 preset（Portal 展示的 6 个 preset 之一）
 - 看 token 派生预览
 - 看组件库示例
 
-如果用户对 13 个 preset 有偏好倾向 / 给出 PRD 描述（"我想做个像 Linear 的工具"），skill 可以**预先推荐一个 preset**让用户在 Portal 里确认 / 调整。
+如果用户对某个 preset 有偏好倾向 / 给出 PRD 描述（"我想做个像 Linear 的工具"），skill 可以**预先推荐一个 preset**让用户在 Portal 里确认 / 调整。
 
 ### 0.5 输出 `anchor-project-mode.md` + `anchor-theme-decision.md`（初稿）
 
@@ -75,7 +75,7 @@ npx design-anchor start
 **Push back**：
 - 用户说"先想想再装包" → 解释品牌前置的价值（早用上、不返工、组件选择更准）；如果用户坚持，可允许跳过装包但要警告后续生码会失去治理
 - 用户说"我不要 React" → 直接告知 skill 不支持
-- 用户在 13 个 preset 都不满意 → 从最接近的派生自定义，记为 token 更新而非 hex 散落
+- 用户在 Portal preset 都不满意 → 从最接近的 preset 派生自定义，记为 token 更新而非 hex 散落
 
 ---
 
@@ -95,7 +95,7 @@ npx design-anchor start
    - 目标用户（落到「他周一早上 9 点在干什么」）
    - 价值主张（落到「用户听一句话就懂」）
    - 为什么现在（落到「3 年前为什么没人做」）
-3. **品牌语境融入提问**：基于 Stage 0 选定的 preset 人格，可以引导用户思考目标用户与品牌的匹配度（如选了 `luxury-style` → "你的目标用户期待的是高端品质还是 PLG SaaS 的自助效率？"）
+3. **品牌语境融入提问**：基于 Stage 0 选定的 preset 人格，可以引导用户思考目标用户与品牌的匹配度（如选了 `stripe` → "你的目标用户期待的是金融级可信还是 PLG SaaS 的自助效率？"）
 4. 输出 `concept.md`
 
 **Push back（设计师在乎的反模式）**：

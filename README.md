@@ -56,13 +56,13 @@ Design-Anchor 是实现与治理基座，提供：
 ├── SKILL.md                         # Claude / Codex Skill 主文件
 ├── AGENTS.md                        # 通用 AI agent 指令镜像
 ├── system-prompt.md                 # 适合复制到 ChatGPT / Claude Web 的系统提示
-├── presets/                         # B 端风格预设
+├── references/                      # lifecycle、stage、npm、hard rules 等核心规则
+├── presets/                         # 与 Design-Anchor Portal 同步的 B 端风格预设
 ├── templates/                       # PRD、Roadmap、Feature、Page IA 等模板
 ├── scripts/
 │   ├── apply-preset.mjs             # 应用 preset 到 Design-Anchor
 │   └── eject-preset.mjs
-└── releases/
-    └── 2b-design-skill-0.3.8.tgz
+└── .claude-plugin/                  # Claude Code plugin manifest
 ```
 
 ## 安装方式
@@ -144,21 +144,14 @@ npx design-anchor init
 
 ## 风格预设
 
-内置 preset 面向 B 端产品和长期 AI Coding：
+内置 preset 与当前 Design-Anchor Portal onboarding 展示保持一致：
 
+- `linear`
+- `stripe`
 - `saas-style-01`
 - `google-style`
 - `hud-dark-style`
-- `luxury-style`
-- `saas-dark-02`
-- `web3-dark`
 - `minimal-dark`
-- `linear`（SaaS Dark 01 / Linear Modern）
-- `vercel-geist`
-- `stripe`
-- `notion-soft`
-- `brutalist`
-- `glass`
 
 Preset 不是硬编码样式。2B-Design 会尽量把颜色、间距、圆角、字体、阴影、动效角色等转成 Design-Anchor token、组件变体和 AI 规则，让首页和产品内页保持一致。
 
@@ -182,7 +175,7 @@ npx design-anchor audit --fix
 
 ## 版本
 
-当前版本：`0.3.8`
+当前版本：`0.4.1`
 
 主要能力：
 

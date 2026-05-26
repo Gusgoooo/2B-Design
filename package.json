@@ -1,6 +1,6 @@
 {
   "name": "2b-design-skill",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "2B-Design：面向中国产品设计师的 B 端 SaaS / dashboard / 内部工具 UI pipeline Claude Skill。基于 React + Tailwind + Design-anchor。9 个 stage 从品牌前置到长期治理。",
   "keywords": [
     "claude-skill",
@@ -24,7 +24,7 @@
     "url": "git+https://github.com/Gusgoooo/2B-Design.git"
   },
   "license": "MIT",
-  "author": "design-anchor contributors",
+  "author": "Gusgoooo",
   "type": "module",
   "files": [
     "SKILL.md",
@@ -34,14 +34,17 @@
     "INSTALL.md",
     "LICENSE",
     "CHANGELOG.md",
+    "agents/",
+    ".claude-plugin/",
     "references/",
     "presets/",
     "templates/",
     "scripts/"
   ],
   "scripts": {
-    "test:apply": "node scripts/apply-preset.mjs vercel-geist .",
-    "verify": "node -e \"const fs=require('fs');['SKILL.md','AGENTS.md','system-prompt.md'].forEach(f=>console.log(f+':',fs.existsSync(f)));console.log('references/:',fs.existsSync('references'));\""
+    "pack:release": "npm pack --pack-destination releases",
+    "test:apply": "node scripts/apply-preset.mjs saas-style-01 .",
+    "verify": "node scripts/verify-skill.mjs"
   },
   "peerDependencies": {
     "design-anchor": "^4.0.0"

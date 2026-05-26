@@ -2,10 +2,10 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "2b-design",
   "displayName": "2B-Design",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "面向中国产品设计师的 B 端 SaaS / dashboard / 内部工具产品设计 pipeline。基于 React + Tailwind + Design-anchor。9 个 stage 从品牌前置（装包+Portal）到长期治理。",
   "author": {
-    "name": "design-anchor contributors"
+    "name": "Gusgoooo"
   },
   "homepage": "https://github.com/Gusgoooo/2B-Design",
   "repository": "https://github.com/Gusgoooo/2B-Design",
