@@ -1,0 +1,52 @@
+{
+  "name": "2b-design-skill",
+  "version": "0.3.8",
+  "description": "Product-designer-first AI Skill that turns B2B/SaaS ideas into product plans, page IA, theme tokens, governed UI implementation briefs, and Design-anchor Project Health loops.",
+  "keywords": [
+    "claude-skill",
+    "ai-skill",
+    "product-design",
+    "design-system",
+    "design-anchor",
+    "b2b-saas",
+    "ai-coding",
+    "vibecoding",
+    "anti-slop"
+  ],
+  "homepage": "https://github.com/Gusgoooo/2B-Design",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gusgoooo/2B-Design.git"
+  },
+  "license": "MIT",
+  "author": "Gusgoooo",
+  "type": "module",
+  "files": [
+    "SKILL.md",
+    "AGENTS.md",
+    "system-prompt.md",
+    "README.md",
+    "INSTALL.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "presets/",
+    "templates/",
+    "scripts/"
+  ],
+  "scripts": {
+    "pack:release": "npm pack --pack-destination releases",
+    "test:apply": "node scripts/apply-preset.mjs vercel-geist .",
+    "verify": "node -e \"console.log('SKILL.md exists:', require('fs').existsSync('SKILL.md'))\""
+  },
+  "bin": {
+    "2b-design-apply-preset": "./scripts/apply-preset.mjs"
+  },
+  "peerDependencies": {
+    "design-anchor": "^4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "design-anchor": {
+      "optional": true
+    }
+  }
+}
